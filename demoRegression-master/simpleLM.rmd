@@ -27,6 +27,104 @@ abline(simp)
 summary.lm(simp)
 ```
 
+The adjusted r-square for LENGTH~NECK is 0.7476.
+o
+```{r}
+bears <- read.csv(file="BEARS.csv",header = TRUE)
+#adjust factors to be factors
+bears$SEX<- as.factor(bears$SEX)
+bears$MONTH<- as.factor(bears$MONTH)
+```
 
-## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
+## Model LENGTH ~ AGE  this is an example  
+
+```{r}
+simp <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted r-square for LENGTH~AGE is 0.5073.
+
+```{r}
+bears <- read.csv(file="BEARS.csv",header = TRUE)
+#adjust factors to be factors
+bears$SEX<- as.factor(bears$SEX)
+bears$MONTH<- as.factor(bears$MONTH)
+```
+
+## Model LENGTH ~ HEADLEN  this is an example  
+
+```{r}
+simp <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted r-square for LENGTH~HEADLEN is 0.8434.
+
+```{r}
+bears <- read.csv(file="BEARS.csv",header = TRUE)
+#adjust factors to be factors
+bears$SEX<- as.factor(bears$SEX)
+bears$MONTH<- as.factor(bears$MONTH)
+```
+
+## Model LENGTH ~ HEADWTH this is an example  
+
+```{r}
+simp <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted r-square for LENGTH~HEADWTH is 0.5321.
+
+```{r}
+bears <- read.csv(file="BEARS.csv",header = TRUE)
+#adjust factors to be factors
+bears$SEX<- as.factor(bears$SEX)
+bears$MONTH<- as.factor(bears$MONTH)
+```
+
+## Model LENGTH ~ CHEST  this is an example  
+
+```{r}
+simp <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted r-square for LENGTH~CHEST IS 0.7869.
+
+```{r}
+bears <- read.csv(file="BEARS.csv",header = TRUE)
+#adjust factors to be factors
+bears$SEX<- as.factor(bears$SEX)
+bears$MONTH<- as.factor(bears$MONTH)
+```
+
+## Model LENGTH ~ WEIGHT  this is an example  
+
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted r-square for LENGTH~WEIGHT is 0.7423.
+
+## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better.
+I put them from worst to best by its value of Adjusted-Rsquared.
+LENGTH~AGE is 0.5073.  
+LENGTH~HEADWTH is 0.5321.  
+LENGTH~WEIGHT is 0.7423.  
+LENGTH~NECK is 0.7476.  
+LENGTH~CHEST IS 0.7869.  
+LENGTH~HEADLEN is 0.8434.  
